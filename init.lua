@@ -1,5 +1,9 @@
 local config = {
 
+header = {
+    "    Kiils ",
+  },
+
   -- Configure AstroNvim updates
   updater = {
     remote = "origin", -- remote to use
@@ -20,15 +24,74 @@ local config = {
   -- Set colorscheme
   colorscheme = "default_theme",
 
+
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
     opt = {
       relativenumber = true, -- sets vim.opt.relativenumber
-      wrap = true,
-      linebreak = true
+      -- wrap = true,
+      -- linebreak = true
+
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
+      vimwiki_list = {
+        {
+          path = '/Users/lennartkiil/GD/TEKST/vimwiki/selvet/',
+          ext = '.txt',
+          syntax = 'markdown',
+          links_space_char = '_'
+        },
+        {
+          path = '/Users/lennartkiil/GD/TEKST/vimwiki/familie/',
+          ext = '.txt',
+          syntax = 'markdown',
+          links_space_char =  '_'
+        },
+        {
+          path = '/Users/lennartkiil/GD/TEKST/vimwiki/forretning/',
+          ext = '.txt',
+          syntax = 'markdown',
+          links_space_char = '_'
+        },
+        {
+          path = '/Users/lennartkiil/GD/TEKST/vimwiki/skrivning/',
+          ext = '.txt',
+          syntax = 'markdown',
+          links_space_char = '_'
+        },
+        {
+          path = '/Users/lennartkiil/GD/TEKST/vimwiki/folkets/',
+          ext = '.txt',
+          syntax = 'markdown',
+          links_space_char = '_'
+        },
+        {
+          path = '/Users/lennartkiil/GD/TEKST/vimwiki/indhold/',
+          ext = '.txt',
+          syntax = 'markdown',
+          links_space_char = '_'
+        },
+        {
+          path = '/Users/lennartkiil/GD/TEKST/vimwiki/klimaleksikon/',
+          ext = '.txt',
+          syntax = 'markdown',
+          links_space_char = '_'
+        },
+        {
+          path = '/Users/lennartkiil/GD/TEKST/vimwiki/biografi/',
+          ext = '.txt',
+          syntax = 'markdown',
+          links_space_char = '_'
+        },
+        {
+          path = '/Users/lennartkiil/GD/TEKST/vimwiki/camilla/',
+          ext = '.txt',
+          syntax = 'markdown',
+          links_space_char = '_'
+        }
+      }
+
     },
   },
 
@@ -62,7 +125,7 @@ local config = {
       rainbow = true,
       symbols_outline = false,
       telescope = true,
-      vimwiki = false,
+      vimwiki = true,
       ["which-key"] = true,
     },
   },
@@ -118,6 +181,17 @@ local config = {
     treesitter = {
       ensure_installed = { "lua" },
     },
+    cmp = {
+      sources = {
+        {
+          name = 'buffer',
+          -- Correct:
+          option = {
+            keyword_pattern = [[\k\+]],
+          }
+        },
+      },
+    },
     ["nvim-lsp-installer"] = {
       ensure_installed = { "sumneko_lua" },
     },
@@ -163,6 +237,15 @@ local config = {
       luasnip = 750,
       buffer = 500,
       path = 250,
+    },
+    sources = {
+      {
+        name = 'buffer',
+        -- Correct:
+        option = {
+          keyword_pattern = [[\k\+]],
+        }
+      },
     },
   },
 
@@ -218,6 +301,13 @@ local config = {
       pattern = "plugins.lua",
       command = "source <afile> | PackerSync",
     })
+    vim.api.nvim_create_augroup("tekst", { clear = true })
+    vim.api.nvim_create_autocmd("FileType", {
+      desc = "spelling",
+      group = "tekst",
+      pattern = {"markdown", "text"},
+      command = "setlocal wrap | setlocal linebreak | setlocal spell spelllang=da,en | nmap æ [s| nmap ø ]s| nmap å z=",
+    })
 
     -- Set up custom filetypes
     -- vim.filetype.add {
@@ -233,5 +323,6 @@ local config = {
     -- }
   end,
 }
+
 
 return config
