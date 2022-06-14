@@ -37,55 +37,55 @@ header = {
       mapleader = " ", -- sets vim.g.mapleader
       vimwiki_list = {
         {
-          path = '~/GE/TEKST/vimwiki/selvet/',
+          path = '~/GD/TEKST/vimwiki/selvet/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
         },
         {
-          path = '~/GE/TEKST/vimwiki/familie/',
+          path = '~/GD/TEKST/vimwiki/familie/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char =  '_'
         },
         {
-          path = '~/GE/TEKST/vimwiki/forretning/',
+          path = '~/GD/TEKST/vimwiki/forretning/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
         },
         {
-          path = '~/GE/TEKST/vimwiki/skrivning/',
+          path = '~/GD/TEKST/vimwiki/skrivning/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
         },
         {
-          path = '~/GE/TEKST/vimwiki/folkets/',
+          path = '~/GD/TEKST/vimwiki/folkets/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
         },
         {
-          path = '~/GE/TEKST/vimwiki/indhold/',
+          path = '~/GD/TEKST/vimwiki/indhold/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
         },
         {
-          path = '~/GE/TEKST/vimwiki/klimaleksikon/',
+          path = '~/GD/TEKST/vimwiki/klimaleksikon/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
         },
         {
-          path = '~/GE/TEKST/vimwiki/biografi/',
+          path = '~/GD/TEKST/vimwiki/biografi/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
         },
         {
-          path = '~/GE/TEKST/vimwiki/camilla/',
+          path = '~/GD/TEKST/vimwiki/camilla/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
