@@ -37,55 +37,55 @@ header = {
       mapleader = " ", -- sets vim.g.mapleader
       vimwiki_list = {
         {
-          path = '/Users/lennartkiil/GD/TEKST/vimwiki/selvet/',
+          path = '~/GE/TEKST/vimwiki/selvet/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
         },
         {
-          path = '/Users/lennartkiil/GD/TEKST/vimwiki/familie/',
+          path = '~/GE/TEKST/vimwiki/familie/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char =  '_'
         },
         {
-          path = '/Users/lennartkiil/GD/TEKST/vimwiki/forretning/',
+          path = '~/GE/TEKST/vimwiki/forretning/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
         },
         {
-          path = '/Users/lennartkiil/GD/TEKST/vimwiki/skrivning/',
+          path = '~/GE/TEKST/vimwiki/skrivning/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
         },
         {
-          path = '/Users/lennartkiil/GD/TEKST/vimwiki/folkets/',
+          path = '~/GE/TEKST/vimwiki/folkets/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
         },
         {
-          path = '/Users/lennartkiil/GD/TEKST/vimwiki/indhold/',
+          path = '~/GE/TEKST/vimwiki/indhold/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
         },
         {
-          path = '/Users/lennartkiil/GD/TEKST/vimwiki/klimaleksikon/',
+          path = '~/GE/TEKST/vimwiki/klimaleksikon/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
         },
         {
-          path = '/Users/lennartkiil/GD/TEKST/vimwiki/biografi/',
+          path = '~/GE/TEKST/vimwiki/biografi/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
         },
         {
-          path = '/Users/lennartkiil/GD/TEKST/vimwiki/camilla/',
+          path = '~/GE/TEKST/vimwiki/camilla/',
           ext = '.txt',
           syntax = 'markdown',
           links_space_char = '_'
@@ -219,7 +219,7 @@ header = {
         -- second key is the prefix, <leader> prefixes
         ["<leader>"] = {
           -- which-key registration table for normal mode, leader prefix
-          -- ["N"] = { "<cmd>tabnew<cr>", "New Buffer" },
+           ["fr"] = { "<cmd>Telescope bibtex<cr>", "Find bibtex reference" },
         },
       },
     },
@@ -324,5 +324,8 @@ header = {
   end,
 }
 
+-- load after
+-- This will load bibtex and have it override the default file sorter
+require('telescope').load_extension('bibtex')
 
 return config
