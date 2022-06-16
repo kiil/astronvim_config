@@ -219,7 +219,9 @@ header = {
         -- second key is the prefix, <leader> prefixes
         ["<leader>"] = {
           -- which-key registration table for normal mode, leader prefix
-           ["fr"] = { "<cmd>Telescope bibtex<cr>", "Find bibtex reference" },
+           ["fR"] = { "<cmd>Telescope bibtex<cr>", "Find reference in bibtex files" },
+           ["sC"] = { "<cmd>Telescope neoclip<cr>", "Search clipboard" },
+           ["sM"] = { "<cmd>lua require('telescope').extensions.macroscope.default()<cr>", "Search macros" },
         },
       },
     },
@@ -327,5 +329,6 @@ header = {
 -- load after
 -- This will load bibtex and have it override the default file sorter
 require('telescope').load_extension('bibtex')
-
+require('telescope').load_extension('neoclip')
+require('neoclip').setup()
 return config
