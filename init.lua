@@ -35,7 +35,6 @@ header = {
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
-      vimwiki_global_ext = 0,
       vimwiki_list = {
         {
           path = '~/GD/TEKST/vimwiki/selvet/',
@@ -227,6 +226,7 @@ header = {
            ["fR"] = { "<cmd>Telescope bibtex<cr>", "Find reference in bibtex files" },
            ["sC"] = { "<cmd>Telescope neoclip<cr>", "Search clipboard" },
            ["sM"] = { "<cmd>lua require('telescope').extensions.macroscope.default()<cr>", "Search macros" },
+           ["v"] = { "`[v`]", "Visual select last change" },
         },
       },
     },
