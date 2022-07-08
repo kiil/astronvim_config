@@ -90,8 +90,9 @@ header = {
           syntax = 'markdown',
           links_space_char = '_'
         }
-      }
-
+      },
+      vimwiki_global_ext = 0,
+      -- markdown_folding = 1,
     },
   },
 
