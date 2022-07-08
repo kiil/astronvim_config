@@ -35,6 +35,7 @@ header = {
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
+      vimwiki_global_ext = 0,
       vimwiki_list = {
         {
           path = '~/GD/TEKST/vimwiki/selvet/',
@@ -188,6 +189,9 @@ header = {
           -- Correct:
           option = {
             keyword_pattern = [[\k\+]],
+            get_bufnrs = function()
+              return vim.api.nvim_list_bufs()
+            end
           }
         },
       },
