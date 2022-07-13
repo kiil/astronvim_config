@@ -22,7 +22,8 @@ header = {
   },
 
   -- Set colorscheme
-  colorscheme = "default_theme",
+  -- colorscheme = "default_theme",
+  colorscheme = "catppuccin",
 
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
@@ -313,7 +314,7 @@ header = {
       desc = "spelling",
       group = "tekst",
       pattern = {"markdown", "text"},
-      command = "setlocal wrap | setlocal linebreak | setlocal spell spelllang=da,en | nmap æ [s| nmap ø ]s| nmap å z=",
+      command = "setlocal wrap | setlocal linebreak | setlocal spell spelllang=da,en | nmap æ [s| nmap ø ]s| nmap å z=| inoremap <buffer> , ,<C-G>u",
     })
 
     -- Set up custom filetypes
@@ -336,4 +337,7 @@ header = {
 require('telescope').load_extension('bibtex')
 require('telescope').load_extension('neoclip')
 require('neoclip').setup()
+require('leap').set_default_keymaps()
+
+
 return config

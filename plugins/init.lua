@@ -6,6 +6,8 @@ return {
     },
     { "AckslD/nvim-neoclip.lua",
     requires = {'nvim-telescope/telescope.nvim'},
-    }
+    },
+    "ggandor/leap.nvim",
+    "catppuccin/nvim",
   }
 }
