@@ -338,6 +338,9 @@ require('telescope').load_extension('bibtex')
 require('telescope').load_extension('neoclip')
 require('neoclip').setup()
 require('leap').set_default_keymaps()
+require('leap').setup {
+  case_sensitive = true,
+}
 
 
 return config
