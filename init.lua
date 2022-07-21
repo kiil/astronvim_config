@@ -342,7 +342,14 @@ require('leap').setup {
   case_sensitive = true,
 }
 require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
+delimiters = {
+        pairs = {
+            ["*"] = { "*", "*" },
+        },
+        aliases = {
+            ["m"] = "*",
+        },
+    },
+})
 
 return config
