@@ -314,7 +314,7 @@ header = {
       desc = "spelling",
       group = "tekst",
       pattern = {"markdown", "text"},
-      command = "setlocal wrap | setlocal linebreak | setlocal spell spelllang=da,en | nmap æ [s| nmap ø ]s| nmap å z=| inoremap <buffer> , ,<C-G>u",
+      command = "setlocal wrap | setlocal linebreak | setlocal spell spelllang=da,en | nmap æ [s| nmap ø ]s| nmap å z=| inoremap <buffer> , ,<C-G>u| nmap M yswml",
     })
 
     -- Set up custom filetypes
