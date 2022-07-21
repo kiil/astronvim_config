@@ -1,6 +1,7 @@
 return {
   {
     -- "vimwiki/vimwiki",
+    "kylechui/nvim-surround",
     { "nvim-telescope/telescope-bibtex.nvim",
     requires = {'nvim-telescope/telescope.nvim'},
     },

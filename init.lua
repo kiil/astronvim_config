@@ -241,9 +241,9 @@ header = {
   -- true == 1000
   cmp = {
     source_priority = {
-      nvim_lsp = 1000,
-      luasnip = 750,
-      buffer = 500,
+      buffer = 1000,
+      luasnip = 350,
+      nvim_lsp = 300,
       path = 250,
     },
     sources = {
@@ -341,6 +341,8 @@ require('leap').set_default_keymaps()
 require('leap').setup {
   case_sensitive = true,
 }
-
+require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
 
 return config
